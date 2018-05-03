@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+                 <!-- #home -->
+                <section id="tm-section-1" class="row tm-section">
+
+                    <div class="tm-white-curve-left col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-6">
+                        <div class="tm-white-curve-left-rec"></div>
+                        <div class="tm-white-curve-left-circle"></div>
+                        <div class="tm-white-curve-text">
+                            <h2 class="tm-section-header blue-text">О Нас</h2>
+                            <p>
+                                KyrgyzFS был зарегистрирован в 2018 году как один из немногих социальных компаний, работающих в Fintech. За последние несколько лет KyrgyzFS растет со своими клиентами и постоянно развивает свою техническую платформу.Теперь платформа используется 12 клиентами и более 65 бесплатными пользователями, в основном учреждениями микрофинансирования, социальными кредиторами, кредитными компаниями и банками в развивающихся странах.
+                            </p>        
+                        </div>                        
+                    </div>
+
+                    <div class="tm-home-right col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-6">
+                        <h2 class="tm-section-header">Наша миссия</h2>
+                        <p class="thin-font">Предлагая доступную и простую платформу, позволяющую учреждениям предоставлять прозрачные и эффективные финансовые услуги, KyrgyzFS активно участвует в финансовой интеграции и ответственном финансировании.</p>
+                    </div>
+                    
+                </section> <!-- #home -->
+
+                <!-- #services -->
+                <section id="tm-section-2" class="row tm-section">
+                    <div class="tm-flex-center col-xs-12 col-sm-6 col-md-6 col-lg-5 col-xl-6">
+                        <img src="{% static 'img/calc.jpg' %}" alt="Image" class="img-fluid tm-img">
+                    </div>
+
+                    <div class="tm-white-curve-right col-xs-12 col-sm-6 col-md-6 col-lg-7 col-xl-6">
+                        
+                        <div class="tm-white-curve-right-circle"></div>
+                        <div class="tm-white-curve-right-rec"></div>
+                        
+                        <div class="tm-white-curve-text">
+                            <h2 class="tm-section-header red-text">Калькулаторы</h2>
+                            <p>
+                                Расчёты стоимости потреблённой электроэнергии, тепловую энергию на цели отопления, на тепловую энергию в паре, на вывоз мусора в Бишкеке.</p>    
+                        </div>
+                        
+                    </div>
+                </section> <!-- #services -->
+
+                <!-- #about -->
+                <section id="tm-section-3" class="row tm-section">
+                    <div class="tm-white-curve-left col-xs-12 col-sm-6 col-md-6 col-lg-7 col-xl-6">
+                        <div class="tm-white-curve-left-rec">
+                            
+                        </div>
+                        <div class="tm-white-curve-left-circle">
+                            
+                        </div>
+                        <div class="tm-white-curve-text">
+                            <h2 class="tm-section-header gray-text">Наши продукты</h2>
+                            <p class="thin-font">
+                                    Полностью автоматизированные поколения заказов с возможностью выполнения ручных заказов для обработки уникальных транзакций.
+                                    Пользовательские типы ввода, настроенные для обработки любых видов бухгалтерских операций.
+                                    Автоматизированный балансовый баланс, баланс оборота, отчет о прибылях и убытках, баланс и отчетность.
+                                    Функции управления, включая временные листы, начисление заработной платы, подрядчиков, авансы и т. Д.
+                            </p>    
+                        </div>
+                        
+                    </div>
+                    <div class="tm-flex-center col-xs-12 col-sm-6 col-md-6 col-lg-5 col-xl-6">
+                        <img src="{% static 'img/pro.jpg' %}" alt="Image" class="img-fluid tm-img">
+                    </div>
+                </section> <!-- #about -->
+
+                <!-- #contact -->
+                <section id="tm-section-4" class="row tm-section">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 col-xl-6 tm-contact-left">
+                        <h2 class="tm-section-header thin-font col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">Отправить соебшение</h2>
+                        <form action="" method="post" class="contact-form">{% csrf_token %}
+
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-12 col-xl-6 tm-contact-form-left">
+                                <div class="form-group">
+                                    <input type="text" id="contact_name" name="{{ form.name.name }}" class="form-control" placeholder="Имя"  required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="contact_email" name="{{ form.email.name }}" class="form-control" placeholder="Email"  required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="contact_subject" name="{{ form.subject.name }}" class="form-control" placeholder="Тема"  required/>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-12 col-xl-6 tm-contact-form-right">
+                                <div class="form-group">
+                                    <textarea id="contact_message" name="{{ form.message.name }}" class="form-control" rows="6" placeholder="Соебшение" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn submit-btn">Отправить</button>
+                            </div>
+
+                        </form>   
+                    </div>
+
+                    <div class="tm-white-curve-right col-xs-12 col-sm-6 col-md-6 col-lg-7 col-xl-6">
+                        
+                        <div class="tm-white-curve-right-circle"></div>
+                        <div class="tm-white-curve-right-rec"></div>
+                        
+                        <div class="tm-white-curve-text">
+                            
+                            <h2 class="tm-section-header green-text">Контакты</h2>
+                            <p>Мы будем рады видеть вас на нашем офисе.</p>
+
+                            <h3 class="tm-section-subheader green-text">Наш адрес</h3>
+                            <address>
+                                Кыргызстан г. Бишкек, С.Чокморов  №254-58
+                            </address>
+                            
+                            <div class="contact-info-links-container">
+                                <span class="green-text contact-info">
+                                	Tel: <a href="tel:+996 700 555 991" class="contact-info-link">+996 700 555 991</a></span>
+                                    <br>
+                                <span class="green-text contact-info">
+                                	Email: <a href="mailto:info@kyrgyzfs.com" class="contact-info-link">info@kyrgyzfs.com</a></span>    
+                            </div>
+                            
+                        </div>                        
+
+                    </div>
+                </section> <!-- #contact -->
+ 
+{% endblock %}

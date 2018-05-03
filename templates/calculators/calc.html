@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+                <section id="tm-section-1" class="row tm-section">
+
+                    <div class="tm-white-curve-left col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-6">
+                        <div class="tm-white-curve-left-rec"></div>
+                        <div class="tm-white-curve-left-circle"></div>
+                        <div class="tm-white-curve-text">
+                            <h2 class="tm-section-header blue-text">На электр-энергии</h2>
+                            <p>
+                             Первый день расчетного периода не входит, а последний входит в расчет.
+                            </p>
+                            <form>
+                                <div class="form-group">
+                                    <label for="example-date-input" class="col-4 col-form-label">Дата с:</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="date" value="" id="startd">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="example-date-input" class="col-4 col-form-label">по:</label>
+                                    <div class="col-sm-10" >
+                                        <input class="form-control" type="date" value="" id="endd">
+                                    </div>
+                                </div>
+                                <div class="col-sm-10">
+                                        <label for="energy">кВтч :</label>
+                                        <input type="number" class="form-control" id="energy">
+                                        <label class="radio-inline"><input type="radio" name="optradio" id="Vysokogornik"> Высокогорник</label>
+                                </div>
+                                <br>
+
+                            </form>
+                            <button type="submit" class="btn btn-primary btn-orange col-sm-4" id="btn">Рассчитать</button>
+                        </div>                        
+                    </div>
+
+                    <div class="tm-home-right col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-6">
+                        <h2 class="tm-section-header"></h2>
+                                
+                    </div>
+                    
+                </section> <!-- #home -->
+
+                <!-- #services -->
+                <section id="tm-section-2" class="row tm-section">
+                    <div class="tm-flex-center col-xs-12 col-sm-6 col-md-6 col-lg-5 col-xl-6">
+                        <img src="{% static 'img/calc.jpg' %}" alt="Image" class="img-fluid tm-img">
+                    </div>
+
+                    <div class="tm-white-curve-right col-xs-12 col-sm-6 col-md-6 col-lg-7 col-xl-6">
+                        
+                        <div class="tm-white-curve-right-circle"></div>
+                        <div class="tm-white-curve-right-rec"></div>
+                        
+                        <div class="tm-white-curve-text">
+                                <h2 class="tm-section-header red-text">На природный газ</h2>
+                                <form>
+                                    <div class="col-sm-10">
+                                        <label for="Pgaz">м³ :</label>
+                                        <input type="number" class="form-control" id="PGaz">
+                                    </div>
+                                    <br>
+                                    <div class="form-group" id="PotrebitelGaz">
+                                        <label for="userh">Потребитель:</label><br>
+                                        <label class="radio-inline"><input type="radio" name="optradio" value="Naselenie"> Население</label><br>
+                                        <label class="radio-inline"><input type="radio" name="optradio" value="Others"> Все остальные</label><br>
+                                    </div>
+                                </form>
+                                <button type="submit" class="btn btn-primary btn-orange col-sm-4" id="btnGaz">Рассчитать</button>       
+                        </div>
+                        
+                    </div>
+                </section> <!-- #services -->
+
+                <!-- #about -->
+                <section id="tm-section-3" class="row tm-section">
+                    <div class="tm-white-curve-left col-xs-12 col-sm-6 col-md-6 col-lg-7 col-xl-6">
+                        <div class="tm-white-curve-left-rec">
+                            
+                        </div>
+                        <div class="tm-white-curve-left-circle">
+                            
+                        </div>
+                        <div class="tm-white-curve-text">
+                            <h2 class="tm-section-header gray-text">На горячую воду</h2>
+                            <form>
+                                    <div class="col-sm-10">
+                                        <label for="hwater">м³ :</label>
+                                        <input type="number" class="form-control" id="hwater">
+                                    </div>
+                                    <br>
+                                    <div class="form-group" id="PotrebitelW">
+                                        <label for="userh">Потребитель:</label><br>
+                                        <label class="radio-inline"><input type="radio" name="optradio" value="Naselenie"> Население</label><br>
+                                        <label class="radio-inline"><input type="radio" name="optradio" value="Budjet"> Бюджетные</label><br>
+                                        <label class="radio-inline"><input type="radio" name="optradio" value="Drugie"> Промышленность и прочие</label>
+                                    </div>
+                            </form>
+                            <button type="submit" class="btn btn-primary btn-orange col-sm-4" id="btnHW">Рассчитать</button>    
+                        </div>
+                        
+                    </div>
+                    <div class="tm-flex-center col-xs-12 col-sm-6 col-md-6 col-lg-5 col-xl-6">
+                        <img src="{% static 'img/pro.jpg' %}" alt="Image" class="img-fluid tm-img">
+                    </div>
+                </section> <!-- #about -->
+
+                <!-- #contact -->
+                <section id="tm-section-4" class="row tm-section">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 col-xl-6 tm-contact-left">
+                         
+                    </div>
+
+                    <div class="tm-white-curve-right col-xs-12 col-sm-6 col-md-6 col-lg-7 col-xl-6">
+                        
+                        <div class="tm-white-curve-right-circle"></div>
+                        <div class="tm-white-curve-right-rec"></div>
+                        
+                        <div class="tm-white-curve-text">
+                            <h2 class="tm-section-header green-text">На горячую воду</h2>
+                                <form>
+                                    <div class="col-sm-10">
+                                        <label for="otoplenie">Гкал :</label>
+                                        <input type="number" class="form-control" id="Gkwater">
+                                    </div>
+                                    <br>
+                                    <div class="form-group" id="PotrebitelGK">
+                                        <label for="userh">Потребитель:</label><br>
+                                        <label class="radio-inline"><input type="radio" name="optradio" value="Naselenie"> Население</label><br>
+                                        <label class="radio-inline"><input type="radio" name="optradio" value="Others"> Все остальные</label><br>
+                                    </div>
+                                </form>
+                                <button type="submit" class="btn btn-primary btn-orange col-sm-4" id="btnGk">Рассчитать</button>
+                            
+                                <form>
+                                    <div class="col-sm-10">
+                                        <label for="WaterforH">Человек  :</label>
+                                        <input type="number" class="form-control" id="Human">
+                                    </div>
+                                    <br>
+                                </form>
+                                <button type="submit" class="btn btn-primary btn-orange col-sm-4" id="btnH">Рассчитать</button>
+                        </div>                        
+
+                    </div>
+                </section>
+
+
+
+                <section id="tm-section-1" class="row tm-section">
+
+                    <div class="tm-white-curve-left col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-6">
+                        <div class="tm-white-curve-left-rec"></div>
+                        <div class="tm-white-curve-left-circle"></div>
+                        <div class="tm-white-curve-text">
+                            <h2 class="tm-section-header blue-text">На Отопление</h2>
+                                    <form>
+                                    <div class="col-sm-10">
+                                        <label for="otoplenie">Гкал :</label>
+                                        <input type="number" class="form-control" id="otoplenie">
+                                    </div>
+                                    <br>
+                                    <div class="form-group" id="PotrebitelO">
+                                        <label for="userh">Потребитель:</label><br>
+                                        <label class="radio-inline"><input type="radio" name="optradio" value="Naselenie"> Население</label><br>
+                                        <label class="radio-inline"><input type="radio" name="optradio" value="Budjet"> Бюджетные</label><br>
+                                        <label class="radio-inline"><input type="radio" name="optradio" value="Drugie"> Промышленность и прочие</label>
+                                    </div>
+                                    </form>
+                                    <button type="submit" class="btn btn-primary btn-orange col-sm-4" id="btnO">Рассчитать</button>       
+                        </div>                        
+                    </div>
+                </section>
+
+    {% endblock %}
